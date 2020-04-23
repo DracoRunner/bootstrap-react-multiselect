@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+
+.multi-select {
+    font-size: 14px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-input {
+    height: 30px;
+    text-indent: 10px;
+    border: 1px solid #d1d3d4;
+    box-shadow: none;
+    outline: none;
+    font-size: inherit;
+    padding: 0;
+    left: 0;
+    width: 92%;
+    margin-left: 3%;
+    border-radius: 4px;
+    z-index: 1001;
+    display: block;
+    margin-top: 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.multi-select {
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.multi-select .multi-select-head {
+    position: relative;
+    width: 100%;
+    border: 2px solid #d1d3d4;
+    border-radius: 6px;
+    padding-left: 19px;
+    height: 38px;
+    font-size: inherit;
+    font-weight: 400;
+    color: #5a5a5a;
+    background-color: #fff;
+    text-align: left;
+    outline: none;
+    line-height: 30px;
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.multi-select div.multi-select-head {
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.multi-select .multi-select-head svg {
+    display: inline-block;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    margin-top: -7px;
 }
+
+.multi-select .multi-select-required-select {
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    z-index: -1;
+    width: 1px;
+}
+
+.multi-select .multi-select-body {
+    position: absolute;
+    border: 1px solid #d1d3d4;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    font-size: inherit;
+    font-weight: 400;
+    overflow: hidden;
+    z-index: 1000;
+    padding-top: 71px;
+}
+
+.multi-select .multi-select-body .multi-select-item {
+    position: relative;
+    width: 100%;
+    padding: 3px 10px;
+    height: 30px;
+    text-align: left;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: white;
+}
+
+.multi-select .multi-select-body-scroll {
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.multi-select .multi-select-body span {
+    display: block;
+    padding: 4px;
+    margin: 1px 0;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectionoption {
+    text-indent: 10px;
+    box-shadow: none;
+    outline: none;
+    font-size: inherit;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    background: #8296a5;
+}
+
+.selectionoption label {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.selectionoption label span {
+    margin: 0 4px;
+}
+

@@ -1,26 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {MultiSelectbox} from "./component/MultiSelectbox";
+import {SelectBox} from "./component/Selectbox";
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const MultiSelect = (props) => {
+    if (props.group) {
+        return <MultiSelectbox {...props}/>
+    } else {
+        return <SelectBox {...props}/>
+    }
 }
-
-export default App;
