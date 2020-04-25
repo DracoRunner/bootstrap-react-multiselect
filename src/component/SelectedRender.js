@@ -22,7 +22,7 @@ export const SelectedRenderGroup = (props) => {
     let newtransformedData = [];
     let {transformedData = []} = props;
     transformedData.forEach(t => {
-        let {groupName = "", options = []} = t
+        let { options = []} = t
         if (Array.isArray(options) && options.length > 0) {
             options.forEach(d => {
                 if (d.selected) {
