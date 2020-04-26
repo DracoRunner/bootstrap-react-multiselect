@@ -1,4 +1,3 @@
-
 .multi-select {
     font-size: 14px !important;
 }
@@ -72,7 +71,18 @@
     font-weight: 400;
     overflow: hidden;
     z-index: 1000;
-    padding-top: 71px;
+}
+.multi-select .multi-select-body-nosearch {
+    position: absolute;
+    border: 1px solid #d1d3d4;
+    border-radius: 8px;
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    font-size: inherit;
+    font-weight: 400;
+    overflow: hidden;
+    z-index: 1000;
 }
 
 .multi-select .multi-select-body .multi-select-item {
@@ -88,7 +98,7 @@
 }
 
 .multi-select .multi-select-body-scroll {
-    height: 150px;
+    height: 200px;
     overflow-y: auto;
     overflow-x: auto;
 }
@@ -127,4 +137,3 @@
 .selectionoption label span {
     margin: 0 4px;
 }
-

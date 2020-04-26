@@ -1,36 +1,45 @@
 import React from "react";
-import * as utils from '../util/DataUtils'
-import _ from 'lodash';
+import * as utils from "../util/DataUtils";
+import _ from "lodash";
 
-export const SelectedRender = (props) => {
+export const SelectedRender = props => {
     if (props.group) {
-        return <SelectedRenderGroup {...props}/>
+        return <SelectedRenderGroup {...props} />;
     } else {
-        return <SelectedRenderNonGrp {...props}/>
+        return <SelectedRenderNonGrp {...props} />;
     }
+};
 
-}
-
-export const SelectedRenderNonGrp = (props) => {
+const SelectedRenderNonGrp = props => {
     let selected = [];
-    selected = _.filter(props.transformedData, {"selected": true});
-    let data = utils.CountRenderer(selected, props.transformedData)
-    return <span>{data}</span>
-}
+    selected = _.filter(props.transformedData, { checked: true });
+    let data = "";
+    if (props.selectedRender) {
+        data = props.selectedRender(selected);
+    } else {
+        data = utils.CountRenderer(selected);
+    }
+    return <span>{data}</span>;
+};
 
-export const SelectedRenderGroup = (props) => {
-    let newtransformedData = [];
-    let {transformedData = []} = props;
+const SelectedRenderGroup = props => {
+    let selected = [];
+    let { transformedData = [] } = props;
     transformedData.forEach(t => {
-        let { options = []} = t
+        let { options = [] } = t;
         if (Array.isArray(options) && options.length > 0) {
             options.forEach(d => {
-                if (d.selected) {
-                    newtransformedData.push(d)
+                if (d.checked) {
+                    selected.push(d);
                 }
-            })
+            });
         }
     });
-    let data = utils.CountRenderer(newtransformedData, props.transformedData)
-    return <span>{data}</span>
-}
+    let data = "";
+    if (props.selectedRender) {
+        data = props.selectedRender(selected);
+    } else {
+        data = utils.CountRenderer(selected);
+    }
+    return <span>{data}</span>;
+};

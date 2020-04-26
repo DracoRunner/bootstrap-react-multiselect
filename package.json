@@ -1,40 +1,67 @@
 {
-  "name": "bootstrap-multiselect-box",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.5.0",
-    "loadsh": "0.0.4",
-    "lodash": "^4.17.15",
-    "popper.js": "^1.16.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0",
-    "react-scripts": "3.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "bootstrap-multiselect-box",
+    "version": "0.1.0",
+    "private": false,
+    "author": "mahendra baghel",
+    "license": "MIT",
+    "main": "./lib/Components/MultiSelect.js",
+    "peerDependencies": {
+        "react": "*",
+        "react-dom": "*",
+        "bootstrap": "*"
+    },
+    "bugs": {
+        "url": "https://github.com/MahiBaghel/bootstrap-react-multiselect"
+    },
+    "homepage": "https://github.com/gogoair/react-combo-select#readme",
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.5.0",
+        "lodash": "^4.17.15",
+        "popper.js": "^1.16.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-icons": "^3.10.0",
+        "react-scripts": "3.4.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "prepublish": "npm run build"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.1.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1"
+    },
+    "keywords": [
+        "react, select, multiselect, search, react-component"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MahiBaghel/bootstrap-react-multiselect.git"
+    }
 }
