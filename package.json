@@ -32,7 +32,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "prepublish": "npm run build"
+        "prepublish": "babel ./src --out-dir ./dist -s inline --copy-files"
     },
     "eslintConfig": {
         "extends": "react-app"
